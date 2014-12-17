@@ -1,0 +1,119 @@
+/*
+ * linked_list.cpp
+ *
+ *  Created on: Dec 11, 2014
+ *      Author: tdwivedi
+ */
+
+
+
+
+#include <iostream>
+using namespace std;
+
+class Node{
+
+	int data;
+	Node * next;
+
+public:
+	Node(){};
+	void SetData(int aData){data = aData;};
+	void SetNext(Node * aNext){next = aNext;};
+	int GetData(){return data;};
+	Node* GetNext(){return next;};
+
+};
+
+class List{
+
+	Node* First;
+
+	public:
+	List() {First = NULL;};
+	void Print();
+	void Append(int data);
+	void Delete(int data);
+
+};
+
+class Stack{
+
+	List * list;
+
+	public:
+	int Pop();
+	int Top();
+	int Push(int x);
+	int Empty();
+	void Make_List();
+
+};
+
+void List::Print(){
+
+	Node * temp = First;
+	if(temp == NULL) {
+		printf("EMPTY\n" );
+	} else {
+		while(temp != NULL){
+			printf("%d-->", temp->GetData());
+			temp = temp->GetNext();
+		}
+	printf("NULL\n");
+	}
+
+}
+
+void List::Append(int data){
+
+	Node* new_node = new Node();
+
+	new_node->SetData(data);
+	new_node->SetNext(NULL);
+
+	Node * temp = First;
+	if(temp == NULL){
+		First = new_node;
+	} else {
+
+	while(temp->GetNext() != NULL){
+		temp = temp->GetNext();
+	}
+	temp->SetNext(new_node);
+
+
+	}
+}
+
+void List::Delete(int data){
+
+	Node * prev = First;
+	Node * current = First;
+	if(First == NULL){
+		return;
+	} else {
+		while(current != NULL){
+			if(current->GetData() == data ){
+				if(current == First){
+					First = First->GetNext();
+					delete current;
+					return;
+				} else {
+				prev->SetNext(current->GetNext());
+				delete current;
+				return;
+				}
+
+			}
+			prev = current;
+			current = current->GetNext();
+
+		}
+
+	}
+}
+
+
+
+

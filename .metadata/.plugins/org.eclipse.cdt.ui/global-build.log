@@ -1,0 +1,601 @@
+
+**** Build of configuration Debug for project DS ****
+
+make all 
+Building file: ../Linked_List/linked_list.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Linked_List/linked_list.d" -MT"Linked_List/linked_list.d" -o "Linked_List/linked_list.o" "../Linked_List/linked_list.cpp"
+../Linked_List/linked_list.cpp:11:17: warning: using directive refers to implicitly-defined namespace 'std'
+using namespace std;
+                ^
+../Linked_List/linked_list.cpp:32:18: error: use of undeclared identifier 'NULL'
+        List() {First = NULL;};
+                        ^
+../Linked_List/linked_list.cpp:55:13: error: use of undeclared identifier 'NULL'
+        if(temp == NULL) {
+                   ^
+../Linked_List/linked_list.cpp:56:3: error: use of undeclared identifier 'printf'
+                printf("EMPTY\n" );
+                ^
+../Linked_List/linked_list.cpp:58:17: error: use of undeclared identifier 'NULL'
+                while(temp != NULL){
+                              ^
+../Linked_List/linked_list.cpp:59:4: error: use of undeclared identifier 'printf'
+                        printf("%d-->", temp->GetData());
+                        ^
+../Linked_List/linked_list.cpp:62:2: error: use of undeclared identifier 'printf'
+        printf("NULL\n");
+        ^
+../Linked_List/linked_list.cpp:72:20: error: use of undeclared identifier 'NULL'
+        new_node->SetNext(NULL);
+                          ^
+../Linked_List/linked_list.cpp:75:13: error: use of undeclared identifier 'NULL'
+        if(temp == NULL){
+                   ^
+../Linked_List/linked_list.cpp:79:27: error: use of undeclared identifier 'NULL'
+        while(temp->GetNext() != NULL){
+                                 ^
+../Linked_List/linked_list.cpp:92:14: error: use of undeclared identifier 'NULL'
+        if(First == NULL){
+                    ^
+../Linked_List/linked_list.cpp:95:20: error: use of undeclared identifier 'NULL'
+                while(current != NULL){
+                                 ^
+1 warning and 11 errors generated.
+make: *** [Linked_List/linked_list.o] Error 1
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project DS ****
+
+make clean 
+rm -rf  ./Linked_List/linked_list.o ./Linked_List/linked_list_test.o  ./Linked_List/linked_list.d ./Linked_List/linked_list_test.d  DS
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project DS ****
+
+make all 
+Building file: ../Linked_List/linked_list.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Linked_List/linked_list.d" -MT"Linked_List/linked_list.d" -o "Linked_List/linked_list.o" "../Linked_List/linked_list.cpp"
+../Linked_List/linked_list.cpp:32:18: error: use of undeclared identifier 'NULL'
+        List() {First = NULL;};
+                        ^
+../Linked_List/linked_list.cpp:55:13: error: use of undeclared identifier 'NULL'
+        if(temp == NULL) {
+                   ^
+../Linked_List/linked_list.cpp:56:3: error: use of undeclared identifier 'printf'
+                printf("EMPTY\n" );
+                ^
+../Linked_List/linked_list.cpp:58:17: error: use of undeclared identifier 'NULL'
+                while(temp != NULL){
+                              ^
+../Linked_List/linked_list.cpp:59:4: error: use of undeclared identifier 'printf'
+                        printf("%d-->", temp->GetData());
+                        ^
+../Linked_List/linked_list.cpp:62:2: error: use of undeclared identifier 'printf'
+        printf("NULL\n");
+        ^
+../Linked_List/linked_list.cpp:72:20: error: use of undeclared identifier 'NULL'
+        new_node->SetNext(NULL);
+                          ^
+../Linked_List/linked_list.cpp:75:13: error: use of undeclared identifier 'NULL'
+        if(temp == NULL){
+                   ^
+../Linked_List/linked_list.cpp:79:27: error: use of undeclared identifier 'NULL'
+        while(temp->GetNext() != NULL){
+                                 ^
+../Linked_List/linked_list.cpp:92:14: error: use of undeclared identifier 'NULL'
+        if(First == NULL){
+                    ^
+../Linked_List/linked_list.cpp:95:20: error: use of undeclared identifier 'NULL'
+                while(current != NULL){
+                                 ^
+11 errors generated.
+make: *** [Linked_List/linked_list.o] Error 1
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project DS ****
+
+make clean 
+rm -rf  ./Linked_List/linked_list.o ./Linked_List/linked_list_test.o  ./Linked_List/linked_list.d ./Linked_List/linked_list_test.d  DS
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project DS ****
+
+make clean 
+rm -rf  ./Linked_List/linked_list.o ./Linked_List/linked_list_test.o  ./Linked_List/linked_list.d ./Linked_List/linked_list_test.d  DS
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project DS ****
+
+make all 
+Building file: ../Linked_List/linked_list.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Linked_List/linked_list.d" -MT"Linked_List/linked_list.d" -o "Linked_List/linked_list.o" "../Linked_List/linked_list.cpp"
+../Linked_List/linked_list.cpp:32:18: error: use of undeclared identifier 'NULL'
+        List() {First = NULL;};
+                        ^
+../Linked_List/linked_list.cpp:55:13: error: use of undeclared identifier 'NULL'
+        if(temp == NULL) {
+                   ^
+../Linked_List/linked_list.cpp:56:3: error: use of undeclared identifier 'printf'
+                printf("EMPTY\n" );
+                ^
+../Linked_List/linked_list.cpp:58:17: error: use of undeclared identifier 'NULL'
+                while(temp != NULL){
+                              ^
+../Linked_List/linked_list.cpp:59:4: error: use of undeclared identifier 'printf'
+                        printf("%d-->", temp->GetData());
+                        ^
+../Linked_List/linked_list.cpp:62:2: error: use of undeclared identifier 'printf'
+        printf("NULL\n");
+        ^
+../Linked_List/linked_list.cpp:72:20: error: use of undeclared identifier 'NULL'
+        new_node->SetNext(NULL);
+                          ^
+../Linked_List/linked_list.cpp:75:13: error: use of undeclared identifier 'NULL'
+        if(temp == NULL){
+                   ^
+../Linked_List/linked_list.cpp:79:27: error: use of undeclared identifier 'NULL'
+        while(temp->GetNext() != NULL){
+                                 ^
+../Linked_List/linked_list.cpp:92:14: error: use of undeclared identifier 'NULL'
+        if(First == NULL){
+                    ^
+../Linked_List/linked_list.cpp:95:20: error: use of undeclared identifier 'NULL'
+                while(current != NULL){
+                                 ^
+11 errors generated.
+make: *** [Linked_List/linked_list.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project DS ****
+
+make all 
+Building file: ../Linked_List/linked_list.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Linked_List/linked_list.d" -MT"Linked_List/linked_list.d" -o "Linked_List/linked_list.o" "../Linked_List/linked_list.cpp"
+../Linked_List/linked_list.cpp:32:18: error: use of undeclared identifier 'NULL'
+        List() {First = NULL;};
+                        ^
+../Linked_List/linked_list.cpp:55:13: error: use of undeclared identifier 'NULL'
+        if(temp == NULL) {
+                   ^
+../Linked_List/linked_list.cpp:56:3: error: use of undeclared identifier 'printf'
+                printf("EMPTY\n" );
+                ^
+../Linked_List/linked_list.cpp:58:17: error: use of undeclared identifier 'NULL'
+                while(temp != NULL){
+                              ^
+../Linked_List/linked_list.cpp:59:4: error: use of undeclared identifier 'printf'
+                        printf("%d-->", temp->GetData());
+                        ^
+../Linked_List/linked_list.cpp:62:2: error: use of undeclared identifier 'printf'
+        printf("NULL\n");
+        ^
+../Linked_List/linked_list.cpp:72:20: error: use of undeclared identifier 'NULL'
+        new_node->SetNext(NULL);
+                          ^
+../Linked_List/linked_list.cpp:75:13: error: use of undeclared identifier 'NULL'
+        if(temp == NULL){
+                   ^
+../Linked_List/linked_list.cpp:79:27: error: use of undeclared identifier 'NULL'
+        while(temp->GetNext() != NULL){
+                                 ^
+../Linked_List/linked_list.cpp:92:14: error: use of undeclared identifier 'NULL'
+        if(First == NULL){
+                    ^
+../Linked_List/linked_list.cpp:95:20: error: use of undeclared identifier 'NULL'
+                while(current != NULL){
+                                 ^
+11 errors generated.
+make: *** [Linked_List/linked_list.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project DS ****
+
+make all 
+Building file: ../Linked_List/linked_list.cpp
+../Linked_List/linked_list.cpp:32:18: error: use of undeclared identifier 'NULL'
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Linked_List/linked_list.d" -MT"Linked_List/linked_list.d" -o "Linked_List/linked_list.o" "../Linked_List/linked_list.cpp"
+        List() {First = NULL;};
+                        ^
+../Linked_List/linked_list.cpp:55:13: error: use of undeclared identifier 'NULL'
+        if(temp == NULL) {
+                   ^
+../Linked_List/linked_list.cpp:56:3: error: use of undeclared identifier 'printf'
+                printf("EMPTY\n" );
+                ^
+../Linked_List/linked_list.cpp:58:17: error: use of undeclared identifier 'NULL'
+                while(temp != NULL){
+                              ^
+../Linked_List/linked_list.cpp:59:4: error: use of undeclared identifier 'printf'
+                        printf("%d-->", temp->GetData());
+                        ^
+../Linked_List/linked_list.cpp:62:2: error: use of undeclared identifier 'printf'
+        printf("NULL\n");
+        ^
+../Linked_List/linked_list.cpp:72:20: error: use of undeclared identifier 'NULL'
+        new_node->SetNext(NULL);
+                          ^
+../Linked_List/linked_list.cpp:75:13: error: use of undeclared identifier 'NULL'
+        if(temp == NULL){
+                   ^
+../Linked_List/linked_list.cpp:79:27: error: use of undeclared identifier 'NULL'
+        while(temp->GetNext() != NULL){
+                                 ^
+../Linked_List/linked_list.cpp:92:14: error: use of undeclared identifier 'NULL'
+        if(First == NULL){
+                    ^
+../Linked_List/linked_list.cpp:95:20: error: use of undeclared identifier 'NULL'
+                while(current != NULL){
+                                 ^
+11 errors generated.
+make: *** [Linked_List/linked_list.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project DS ****
+
+make all 
+Building file: ../Linked_List/linked_list.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Linked_List/linked_list.d" -MT"Linked_List/linked_list.d" -o "Linked_List/linked_list.o" "../Linked_List/linked_list.cpp"
+Finished building: ../Linked_List/linked_list.cpp
+ 
+Building file: ../Linked_List/linked_list_test.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Linked_List/linked_list_test.d" -MT"Linked_List/linked_list_test.d" -o "Linked_List/linked_list_test.o" "../Linked_List/linked_list_test.cpp"
+Finished building: ../Linked_List/linked_list_test.cpp
+ 
+Building target: DS
+Invoking: MacOS X C++ Linker
+g++  -o "DS"  ./Linked_List/linked_list.o ./Linked_List/linked_list_test.o   
+Finished building target: DS
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project DS ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project DS ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project DS ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project DS ****
+
+make all 
+Building file: ../Linked_List/linked_list.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Linked_List/linked_list.d" -MT"Linked_List/linked_list.d" -o "Linked_List/linked_list.o" "../Linked_List/linked_list.cpp"
+Finished building: ../Linked_List/linked_list.cpp
+ 
+Building target: DS
+Invoking: MacOS X C++ Linker
+g++  -o "DS"  ./Linked_List/linked_list.o ./Linked_List/linked_list_test.o   
+Finished building target: DS
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project DS ****
+
+make all 
+Building file: ../Linked_List/linked_list_test.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Linked_List/linked_list_test.d" -MT"Linked_List/linked_list_test.d" -o "Linked_List/linked_list_test.o" "../Linked_List/linked_list_test.cpp"
+../Linked_List/linked_list_test.cpp:13:5: error: redefinition of 'main'
+int main() {
+    ^
+../Linked_List/linked_list.cpp:119:5: note: previous definition is here
+int main() {
+    ^
+1 error generated.
+make: *** [Linked_List/linked_list_test.o] Error 1
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project DS ****
+
+make clean 
+rm -rf  ./Linked_List/linked_list.o ./Linked_List/linked_list_test.o  ./Linked_List/linked_list.d ./Linked_List/linked_list_test.d  DS
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project DS ****
+
+make all 
+Building file: ../Linked_List/linked_list.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Linked_List/linked_list.d" -MT"Linked_List/linked_list.d" -o "Linked_List/linked_list.o" "../Linked_List/linked_list.cpp"
+Finished building: ../Linked_List/linked_list.cpp
+ 
+Building file: ../Linked_List/linked_list_test.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Linked_List/linked_list_test.d" -MT"Linked_List/linked_list_test.d" -o "Linked_List/linked_list_test.o" "../Linked_List/linked_list_test.cpp"
+Finished building: ../Linked_List/linked_list_test.cpp
+ 
+Building target: DS
+Invoking: MacOS X C++ Linker
+g++  -o "DS"  ./Linked_List/linked_list.o ./Linked_List/linked_list_test.o   
+duplicate symbol __ZN4List5PrintEv in:
+    ./Linked_List/linked_list.o
+    ./Linked_List/linked_list_test.o
+duplicate symbol __ZN4List6AppendEi in:
+    ./Linked_List/linked_list.o
+    ./Linked_List/linked_list_test.o
+duplicate symbol __ZN4List6DeleteEi in:
+    ./Linked_List/linked_list.o
+    ./Linked_List/linked_list_test.o
+ld: 3 duplicate symbols for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [DS] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project DS ****
+
+make all 
+Building target: DS
+Invoking: MacOS X C++ Linker
+g++  -o "DS"  ./Linked_List/linked_list.o ./Linked_List/linked_list_test.o   
+duplicate symbol __ZN4List5PrintEv in:
+    ./Linked_List/linked_list.o
+    ./Linked_List/linked_list_test.o
+duplicate symbol __ZN4List6AppendEi in:
+    ./Linked_List/linked_list.o
+    ./Linked_List/linked_list_test.o
+duplicate symbol __ZN4List6DeleteEi in:
+    ./Linked_List/linked_list.o
+    ./Linked_List/linked_list_test.o
+ld: 3 duplicate symbols for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [DS] Error 1
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project DS ****
+
+make clean 
+rm -rf  ./Linked_List/linked_list.o ./Linked_List/linked_list_test.o  ./Linked_List/linked_list.d ./Linked_List/linked_list_test.d  DS
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project DS ****
+
+make all 
+Building file: ../Linked_List/linked_list.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Linked_List/linked_list.d" -MT"Linked_List/linked_list.d" -o "Linked_List/linked_list.o" "../Linked_List/linked_list.cpp"
+../Linked_List/linked_list.cpp:11:17: warning: using directive refers to implicitly-defined namespace 'std'
+using namespace std;
+                ^
+../Linked_List/linked_list.cpp:32:18: error: use of undeclared identifier 'NULL'
+        List() {First = NULL;};
+                        ^
+../Linked_List/linked_list.cpp:55:13: error: use of undeclared identifier 'NULL'
+        if(temp == NULL) {
+                   ^
+../Linked_List/linked_list.cpp:56:3: error: use of undeclared identifier 'printf'
+                printf("EMPTY\n" );
+                ^
+../Linked_List/linked_list.cpp:58:17: error: use of undeclared identifier 'NULL'
+                while(temp != NULL){
+                              ^
+../Linked_List/linked_list.cpp:59:4: error: use of undeclared identifier 'printf'
+                        printf("%d-->", temp->GetData());
+                        ^
+../Linked_List/linked_list.cpp:62:2: error: use of undeclared identifier 'printf'
+        printf("NULL\n");
+        ^
+../Linked_List/linked_list.cpp:72:20: error: use of undeclared identifier 'NULL'
+        new_node->SetNext(NULL);
+                          ^
+../Linked_List/linked_list.cpp:75:13: error: use of undeclared identifier 'NULL'
+        if(temp == NULL){
+                   ^
+../Linked_List/linked_list.cpp:79:27: error: use of undeclared identifier 'NULL'
+        while(temp->GetNext() != NULL){
+                                 ^
+../Linked_List/linked_list.cpp:92:14: error: use of undeclared identifier 'NULL'
+        if(First == NULL){
+                    ^
+../Linked_List/linked_list.cpp:95:20: error: use of undeclared identifier 'NULL'
+                while(current != NULL){
+                                 ^
+1 warning and 11 errors generated.
+make: *** [Linked_List/linked_list.o] Error 1
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project DS ****
+
+make clean 
+rm -rf  ./Linked_List/linked_list.o ./Linked_List/linked_list_test.o  ./Linked_List/linked_list.d ./Linked_List/linked_list_test.d  DS
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project DS ****
+
+make all 
+Building file: ../Linked_List/linked_list.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Linked_List/linked_list.d" -MT"Linked_List/linked_list.d" -o "Linked_List/linked_list.o" "../Linked_List/linked_list.cpp"
+../Linked_List/linked_list.cpp:32:18: error: use of undeclared identifier 'NULL'
+        List() {First = NULL;};
+                        ^
+../Linked_List/linked_list.cpp:55:13: error: use of undeclared identifier 'NULL'
+        if(temp == NULL) {
+                   ^
+../Linked_List/linked_list.cpp:56:3: error: use of undeclared identifier 'printf'
+                printf("EMPTY\n" );
+                ^
+../Linked_List/linked_list.cpp:58:17: error: use of undeclared identifier 'NULL'
+                while(temp != NULL){
+                              ^
+../Linked_List/linked_list.cpp:59:4: error: use of undeclared identifier 'printf'
+                        printf("%d-->", temp->GetData());
+                        ^
+../Linked_List/linked_list.cpp:62:2: error: use of undeclared identifier 'printf'
+        printf("NULL\n");
+        ^
+../Linked_List/linked_list.cpp:72:20: error: use of undeclared identifier 'NULL'
+        new_node->SetNext(NULL);
+                          ^
+../Linked_List/linked_list.cpp:75:13: error: use of undeclared identifier 'NULL'
+        if(temp == NULL){
+                   ^
+../Linked_List/linked_list.cpp:79:27: error: use of undeclared identifier 'NULL'
+        while(temp->GetNext() != NULL){
+                                 ^
+../Linked_List/linked_list.cpp:92:14: error: use of undeclared identifier 'NULL'
+        if(First == NULL){
+                    ^
+../Linked_List/linked_list.cpp:95:20: error: use of undeclared identifier 'NULL'
+                while(current != NULL){
+                                 ^
+11 errors generated.
+make: *** [Linked_List/linked_list.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project DS ****
+
+make all 
+Building file: ../Linked_List/linked_list.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Linked_List/linked_list.d" -MT"Linked_List/linked_list.d" -o "Linked_List/linked_list.o" "../Linked_List/linked_list.cpp"
+Finished building: ../Linked_List/linked_list.cpp
+ 
+Building file: ../Linked_List/linked_list_test.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Linked_List/linked_list_test.d" -MT"Linked_List/linked_list_test.d" -o "Linked_List/linked_list_test.o" "../Linked_List/linked_list_test.cpp"
+Finished building: ../Linked_List/linked_list_test.cpp
+ 
+Building target: DS
+Invoking: MacOS X C++ Linker
+g++  -o "DS"  ./Linked_List/linked_list.o ./Linked_List/linked_list_test.o   
+duplicate symbol __ZN4List5PrintEv in:
+    ./Linked_List/linked_list.o
+    ./Linked_List/linked_list_test.o
+duplicate symbol __ZN4List6AppendEi in:
+    ./Linked_List/linked_list.o
+    ./Linked_List/linked_list_test.o
+duplicate symbol __ZN4List6DeleteEi in:
+    ./Linked_List/linked_list.o
+    ./Linked_List/linked_list_test.o
+ld: 3 duplicate symbols for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [DS] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project DS ****
+
+make all 
+Building target: DS
+Invoking: MacOS X C++ Linker
+g++  -o "DS"  ./Linked_List/linked_list.o ./Linked_List/linked_list_test.o   
+duplicate symbol __ZN4List5PrintEv in:
+    ./Linked_List/linked_list.o
+    ./Linked_List/linked_list_test.o
+duplicate symbol __ZN4List6AppendEi in:
+    ./Linked_List/linked_list.o
+    ./Linked_List/linked_list_test.o
+duplicate symbol __ZN4List6DeleteEi in:
+    ./Linked_List/linked_list.o
+    ./Linked_List/linked_list_test.o
+ld: 3 duplicate symbols for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [DS] Error 1
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project DS ****
+
+make clean 
+rm -rf  ./Linked_List/linked_list.o ./Linked_List/linked_list_test.o  ./Linked_List/linked_list.d ./Linked_List/linked_list_test.d  DS
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project DS ****
+
+make all 
+Building file: ../Linked_List/linked_list.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Linked_List/linked_list.d" -MT"Linked_List/linked_list.d" -o "Linked_List/linked_list.o" "../Linked_List/linked_list.cpp"
+Finished building: ../Linked_List/linked_list.cpp
+ 
+Building file: ../Linked_List/linked_list_test.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Linked_List/linked_list_test.d" -MT"Linked_List/linked_list_test.d" -o "Linked_List/linked_list_test.o" "../Linked_List/linked_list_test.cpp"
+Finished building: ../Linked_List/linked_list_test.cpp
+ 
+Building target: DS
+Invoking: MacOS X C++ Linker
+g++  -o "DS"  ./Linked_List/linked_list.o ./Linked_List/linked_list_test.o   
+duplicate symbol __ZN4List5PrintEv in:
+    ./Linked_List/linked_list.o
+    ./Linked_List/linked_list_test.o
+duplicate symbol __ZN4List6AppendEi in:
+    ./Linked_List/linked_list.o
+    ./Linked_List/linked_list_test.o
+duplicate symbol __ZN4List6DeleteEi in:
+    ./Linked_List/linked_list.o
+    ./Linked_List/linked_list_test.o
+ld: 3 duplicate symbols for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [DS] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project DS ****
+
+make all 
+Building target: DS
+Invoking: MacOS X C++ Linker
+g++  -o "DS"  ./Linked_List/linked_list.o ./Linked_List/linked_list_test.o   
+duplicate symbol __ZN4List5PrintEv in:
+    ./Linked_List/linked_list.o
+    ./Linked_List/linked_list_test.o
+duplicate symbol __ZN4List6AppendEi in:
+    ./Linked_List/linked_list.o
+    ./Linked_List/linked_list_test.o
+duplicate symbol __ZN4List6DeleteEi in:
+    ./Linked_List/linked_list.o
+    ./Linked_List/linked_list_test.o
+ld: 3 duplicate symbols for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [DS] Error 1
+
+**** Build Finished ****

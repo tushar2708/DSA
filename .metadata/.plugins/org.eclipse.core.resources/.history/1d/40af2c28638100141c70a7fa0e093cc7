@@ -1,0 +1,36 @@
+/*
+ * linked_list_test.cpp
+ *
+ *  Created on: Dec 11, 2014
+ *      Author: tdwivedi
+ */
+
+#include <iostream.h>
+#include <conio.h>
+using namespace std;
+
+
+#include "linked_list.cpp"
+
+int main() {
+	// your code goes here
+	int i, x, N = 0;
+	List list;
+
+	scanf("%d\n", &N);
+	for(i=0; i<N; i++){
+		scanf("%d ", &x);
+		list.Append(x);
+	}
+
+	list.Print();
+	scanf("%d\n", &N);
+	for(i=0; i<N; i++){
+		scanf("%d ", &x);
+		list.Delete(x);
+	}
+
+	list.Print();
+
+	return 0;
+}
