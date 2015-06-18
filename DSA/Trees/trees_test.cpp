@@ -63,8 +63,17 @@ int main()
 	tree.Print(PRE_ORDER);
 	tree.Print(IN_ORDER);
 	tree.Print(POST_ORDER);
-        tree.Print(LEVEL_ORDER);
+        //tree.Print(LEVEL_ORDER);
 	tree.Print(5);
+
+	tree.Delete(4);
+
+	cout << "Value to be Deleted : 4\n" ;
+
+        tree.Print(PRE_ORDER);
+        tree.Print(IN_ORDER);
+        tree.Print(POST_ORDER);
+
 
 	return 0;
 }

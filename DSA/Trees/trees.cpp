@@ -15,6 +15,8 @@ using namespace std;
 #define IN_ORDER 2
 #define POST_ORDER 3
 #define LEVEL_ORDER 4
+
+
 class TreeNode
 {
 	private:
@@ -50,9 +52,12 @@ class Tree
 		bool isEmpty(){if(root == NULL) { return true;} return false;};
 
 		int height();
+		
 		TreeNode * Insert(int aData);
 		TreeNode * Search(int aData);
-
+		TreeNode * Delete(int aData);
+		TreeNode * MinValueNode(TreeNode * node);
+		TreeNode * MaxValueNode(TreeNode * node);
 		//int Delete(int Key);
 		void Print(int Traversal);
 	private:
@@ -62,6 +67,7 @@ class Tree
 		int height_rec(TreeNode * node);
 		TreeNode * Search_rec(TreeNode * node, int aData);
 		TreeNode * Insert_rec(TreeNode * node, int aData);
+		TreeNode * Delete_rec(TreeNode * node, int aData);
 
 		void Preorder(TreeNode *root_member);
 		void Inorder(TreeNode *root_member);
@@ -152,6 +158,7 @@ TreeNode * Tree::Search_rec(TreeNode * node, int aData)
 
 }
 
+
 TreeNode * Tree::Insert(int aData)
 {
 	if(root == NULL)
@@ -178,6 +185,73 @@ TreeNode * Tree::Insert_rec(TreeNode * node, int aData)
 	}
 
 }
+
+TreeNode * Tree::MinValueNode(TreeNode * node) {
+
+	while(node->GetLeft() != NULL){
+		node = node->GetLeft();
+	}
+	return node;
+}
+
+TreeNode * Tree::MaxValueNode(TreeNode * node) {
+
+	while(node->GetRight() != NULL){
+		node = node->GetRight();
+	}
+	return node;
+}
+
+TreeNode * Tree::Delete(int aData)
+{
+
+        if(root == NULL)
+        {
+                return root;
+        } else {
+                Delete_rec(root, aData);
+        }
+
+        return root;
+}
+
+TreeNode * Tree::Delete_rec(TreeNode * node, int aData)
+{
+
+	if(node == NULL)
+		return node;
+
+	// If key is greater than root node, move towards right recursively.
+	if(aData > node->GetData()){	// If key is greater than root node, move towards right recursively.
+		node->SetRight(Delete_rec(node->GetRight(), aData));
+	} else if (aData < node->GetData()) {	// If key is less than root node, move towards left recursively.
+		node->SetLeft(Delete_rec(node->GetLeft(), aData));
+	} else {	// If key is same as root node, this is the key to be deleted.
+
+		if (node->GetLeft() == NULL){	// Recursion termination 1. Node with either no child or one child
+			TreeNode * temp = node->GetRight();
+			delete node;
+			return temp;
+		} else if (node->GetRight() == NULL){	// Recursion termination 2. Node with either no child or one child
+			TreeNode * temp = node->GetLeft();
+			delete node;
+			return temp;
+
+			// Recursion termination 3. Node with no child is also take care of in above to cases
+
+		} else {	//	Node with two subtrees, replace it with it's "Inorder successor",
+			//	which is in this case (2 sub-trees) is minimum value in Right subtree.
+			TreeNode * temp = MinValueNode(node->GetRight());	//	Find Inorder succesor
+			node->SetData(temp->GetData());			//	Cope the data of inorder succesor
+			node->SetRight( Delete_rec ( node->GetRight(), temp->GetData() ) );	//Recursively delete the inorder succesor
+		}
+
+		return node;	//	Keep returning the root of the tree formed after deletion of any given node
+
+	}
+
+}
+
 
 void Tree::Print(int Traversal)
 {
