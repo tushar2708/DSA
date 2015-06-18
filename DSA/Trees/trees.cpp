@@ -58,6 +58,7 @@ class Tree
 		TreeNode * Delete(int aData);
 		TreeNode * MinValueNode(TreeNode * node);
 		TreeNode * MaxValueNode(TreeNode * node);
+		int Size();
 		//int Delete(int Key);
 		void Print(int Traversal);
 	private:
@@ -68,6 +69,7 @@ class Tree
 		TreeNode * Search_rec(TreeNode * node, int aData);
 		TreeNode * Insert_rec(TreeNode * node, int aData);
 		TreeNode * Delete_rec(TreeNode * node, int aData);
+		int Size_rec(TreeNode * node);
 
 		void Preorder(TreeNode *root_member);
 		void Inorder(TreeNode *root_member);
@@ -110,6 +112,25 @@ int Tree::height()
 	}
 
 
+}
+
+int Tree::Size()
+{
+	if(root == NULL)
+		return 0;
+	else
+	{
+		return Size_rec(root);
+	}
+
+}
+
+int Tree::Size_rec(TreeNode * node)
+{
+	if (node == NULL)
+	return 0;
+
+	return Size_rec(node->GetLeft()) + 1 + Size_rec(node->GetRight());
 }
 
 int Tree::height_rec(TreeNode * node)

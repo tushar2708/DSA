@@ -66,6 +66,8 @@ int main()
         //tree.Print(LEVEL_ORDER);
 	tree.Print(5);
 
+	cout << "Size before deletion = " << tree.Size() << "\n";
+
 	tree.Delete(4);
 
 	cout << "Value to be Deleted : 4\n" ;
@@ -74,6 +76,7 @@ int main()
         tree.Print(IN_ORDER);
         tree.Print(POST_ORDER);
 
+	cout << "Size after deletion = " << tree.Size() << "\n";
 
 	return 0;
 }
