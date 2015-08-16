@@ -11,30 +11,44 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
-
-#define Array_Stack Stack
-//#define List_Stack Stack
-#define DEFAULT_SIZE 50
+#include <string>
+#include <exception>
 
 using namespace std;
 
+#define Array_Stack Stack
+//#define List_Stack Stack
 
-class Array_Stack{
+class E : public std::exception {
 
+public:
+	explicit E(const char * s) throw() : msg(s) { }
+	const char * what() const throw() {return msg;}
+private:
+	E(){};
+	const char * msg;
+
+};
+
+template <typename T>
+class Array_Stack {
+
+	static const int default_size = 20;
 	int top;
-	unsigned capacity;
-	int * array;
+	unsigned int capacity;
+	T * array;
 
 	public:
-	Array_Stack(int size) {capacity = size; array = new int[capacity]; top = -1; };
-	Array_Stack() {capacity = DEFAULT_SIZE; array = new int[capacity]; top = -1; };
+	explicit Array_Stack(int size = default_size) {capacity = size; array = new T[capacity]; top = -1; };
+	//Array_Stack() {capacity = DEFAULT_SIZE; array = new T[capacity]; top = -1; };
+	~Array_Stack() {delete[] array;};
 
-	bool isFull();
-	bool isEmpty();
+	bool isFull(){return (top == (capacity-1));};
+	bool isEmpty(){return (top == -1);};
 
-	bool Push(int data);
-	int Pop();
-	int Peek();
+	T & Push(const T & data);
+	T & Pop();
+	T & Peek();
 
 	void Print();
 	//void Delete(int data);
@@ -43,136 +57,120 @@ class Array_Stack{
 
 };
 
+template <typename T>
 class StackNode {
 
-	int data;
+	T data;
 	StackNode * next;
 
 	public:
-	StackNode(){next = NULL;};
-	StackNode(int item){data = item ; next = NULL;};
-	void SetData(int item){data = item;};
-	int GetData(){return data;};
+
+	StackNode(const T & item = 0){data = item ; next = nullptr;};
+	void SetData(const T & item){data = item;};
+	T & GetData(){return data;};
 	void SetNext(StackNode * nextAddr) { next = nextAddr; };
 	StackNode * GetNext(){return next;};
 };
 
-
+template <typename T>
 class List_Stack{
 
-	StackNode * top;
+	static const int default_size = 20;
+	StackNode<T> * top;
 	int elements;
 	int capacity;
 
 	public:
-	List_Stack(int size){capacity = size; elements = 0; top = NULL;};
-	List_Stack() {capacity = DEFAULT_SIZE; elements = 0; top = NULL;};
+	List_Stack(int size = default_size){capacity = size; elements = 0; top = nullptr;};
+	//List_Stack() {capacity = DEFAULT_SIZE; elements = 0; top = nullptr;};
 
-        bool isFull();
-        bool isEmpty();
+        bool isFull(){return (elements == capacity);};
+        bool isEmpty(){return (top == nullptr);};
 
-	bool Push(int data);
-	int Pop();
-	int Peek();
+	const T & Push(T const & data);
+	const T Pop();
+	const T Peek();
 
-	void Print();	
-	//void Make_List();
-
+	void Print();
 };
 
 
-bool Array_Stack::isFull()
-{
-//	cout << "top : " << top << " capacity : " << capacity;
-	return (top == (capacity-1));
-}
 
-bool List_Stack::isFull()
-{
-        return (elements == capacity);
-}
 
-bool Array_Stack::isEmpty()
-{
-	return (top == -1);
-}
-
-bool List_Stack::isEmpty()
-{
-        return (top == NULL);
-}
-
-bool Array_Stack::Push(int data)
+template <typename T>
+T & Array_Stack<T>::Push(T const & data)
 {
 	if(isFull()){
-		cout << "StackOverflow Happend";
-		return false;
+		throw E("Stack Full");
+		//cout << "StackOverflow Happend";
+		//return false;
 	}
 
-	array[++top] = data;
-	return true;
-	//cout << data << " pushed to Array stack : " << array[top] << "\n";
+	return array[++top] = data;
 }
 
-bool List_Stack::Push(int data)
+template <typename T>
+const T & List_Stack<T>::Push(const T & data)
 {
         if(isFull()){
-                cout << "StackOverflow Happend";
-                return false;
+		throw E("Stack Full");
+                //cout << "StackOverflow Happend";
+                //return false;
         }
 
-	StackNode * newNode = new StackNode(data);
+	StackNode<T> * newNode = new StackNode<T>(data);
 	newNode->SetNext(top);
         top = newNode;
 	elements++;
-        //cout << data << " pushed to List stack : " << data << "\n";
-	return true;
+	return data;
 }
 
-int Array_Stack::Pop()
+template <typename T>
+T & Array_Stack<T>::Pop()
 {
 	if(isEmpty())
-		return INT_MIN;
+		throw E("Stack Empty");
 
 	return array[top--];
 	//cout << "popped from stack : " << array[top] << "\n";
 }
 
-int List_Stack::Pop()
+template <typename T>
+const T List_Stack<T>::Pop()
 {
         if(isEmpty())
-                return INT_MIN;
+                throw E("Stack Empty");
 
-        int data = top->GetData();
-	StackNode * temp = top;
+        const T data = top->GetData();
+	StackNode<T> * temp = top;
 	top = top->GetNext();
 	delete temp;
 
-        //cout << "popped from stack : " << data << "\n";
 	return data;
 }
 
-int Array_Stack::Peek()
+template <typename T>
+T & Array_Stack<T>::Peek()
 {
         if(isEmpty())
-                return INT_MIN;
+                throw E("Stack Empty");
 
-	//cout << "peeked from stack : " << array[top] << "\n";
         return array[top];
 }
 
-int List_Stack::Peek()
+template <typename T>
+const T List_Stack<T>::Peek()
 {
         if(isEmpty())
-                return INT_MIN;
+                throw E("Stack Empty");
 
-        int data = top->GetData();
- 
-        //cout << "peeked from stack : " << data << "\n";
+        const T data = top->GetData();
+
         return data;
 }
 
-void Array_Stack::Print()
+template <typename T>
+void Array_Stack<T>::Print()
 {
 	cout << "[Top] ";
 
@@ -182,11 +180,12 @@ void Array_Stack::Print()
 	cout << "[Bottom]\n";
 }
 
-void List_Stack::Print()
+template <typename T>
+void List_Stack<T>::Print()
 {
         cout << "[Top] ";
 
-	StackNode * temp = top;
+	StackNode<T> * temp = top;
 
         while(temp) {
                 cout << "-> " << temp->GetData() << " ";
