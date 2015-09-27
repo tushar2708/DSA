@@ -17,7 +17,7 @@
 using namespace std;
 
 //#define Array_Queue Queue
-#define List_Queue Queue
+//#define List_Queue Queue
 
 class E : public std::exception {
 

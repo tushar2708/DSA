@@ -1,4 +1,4 @@
-//#include "queue.cpp"
+#define Array_Queue Queue
 
 #include "queue.cpp"
 
