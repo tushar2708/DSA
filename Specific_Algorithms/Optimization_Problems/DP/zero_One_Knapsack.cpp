@@ -17,12 +17,12 @@ You cannot break an item, either pick the complete item, or don’t pick it (0-1
 
 using namespace std;
 
-int max2(int a, int b)
+int max(int a, int b)
 {
 	return (a>b) ? a : b;
 }
 
-int max3(int a, int b, int c)
+int max(int a, int b, int c)
 {
 	if(a>c)
 		return (a>b) ? a : b;
@@ -30,7 +30,7 @@ int max3(int a, int b, int c)
 		return (c>b) ? c : b;
 }
 
-int min3(int a, int b, int c)
+int min(int a, int b, int c)
 {
 	if(a<c)
 		return (a<b) ? a : b;
@@ -46,7 +46,7 @@ int knapSack_rec(int W, int wt[], int val[], int n)
 	if(wt[n-1] > W){
 		return knapSack_rec(W, wt, val, n-1);
 	} else {
-		return max2 (
+		return max (
 				knapSack_rec(W, wt, val, n-1) ,
 				val[n-1] + knapSack_rec(W-wt[n-1], wt, val, n-1) 
 				);
@@ -72,7 +72,7 @@ int knapSack_memoization(int W, int wt[], int val[], int n)
 
 		memo[W][n] = (wt[n-1] > W) ? 
 				knapSack_memoization(W, wt, val, n-1) :
-				max2 ( knapSack_memoization(W, wt, val, n-1) , val[n-1] + knapSack_memoization(W-wt[n-1], wt, val, n-1) );
+				max ( knapSack_memoization(W, wt, val, n-1) , val[n-1] + knapSack_memoization(W-wt[n-1], wt, val, n-1) );
 		return memo[W][n];
 	
 	}
@@ -91,7 +91,7 @@ int knapSack_tabulation (int W, int wt[], int val[], int n)
 			} else if ( wt[j-1] > w ) {
 				L[w][j] = L[w][j-1];
 			} else {
-				L[w][j] =  max2 ( L[w] [j-1] , val[j-1] + L[ w-wt[j-1] ] [j-1] );
+				L[w][j] =  max ( L[w] [j-1] , val[j-1] + L[ w-wt[j-1] ] [j-1] );
 			}
 		}
 	}
