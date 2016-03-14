@@ -14,7 +14,7 @@ int main()
 {
 	// your code goes here
 	int i, x, N = 0;
-/*
+
 	Tree<int> tree ;
 
 	//printf ("Length = %d\n", tree.Length());
@@ -55,11 +55,11 @@ int main()
         tree.Print(POST_ORDER);
 
 	cout << "Size after deletion = " << tree.Size() << "\n";
-*/
+
+	tree.top_view();
 
 
-
-
+	/*
 	Tree<string> tree ;
 
 	//printf ("Length = %d\n", tree.Length());
@@ -102,8 +102,8 @@ int main()
 	cout << "Size after deletion = " << tree.Size() << "\n";
 
 
-
-
+	//tree:top_view();
+	*/
 
 	return 0;
 }

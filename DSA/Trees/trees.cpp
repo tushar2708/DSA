@@ -9,6 +9,7 @@
 
 #include <iostream>
 #include <queue>
+#include <map>
 using namespace std;
 
 #define PRE_ORDER 1
@@ -53,6 +54,8 @@ class TreeNode
 template <typename T>
 class Tree
 {
+	public:
+		map<int, T > topView;
 
 	private:
 		TreeNode<T> *root;
@@ -69,6 +72,7 @@ class Tree
 		TreeNode<T> * Delete(const T & aData);
 		TreeNode<T> * MinValueNode(TreeNode<T> * node);
 		TreeNode<T> * MaxValueNode(TreeNode<T> * node);
+		void top_view();
 		int Size();
 		//int Delete(int Key);
 		void Print(int Traversal);
@@ -80,6 +84,7 @@ class Tree
 		TreeNode<T> * Search_rec(TreeNode<T> * node, const T & aData);
 		TreeNode<T> * Insert_rec(TreeNode<T> * node, const T & aData);
 		TreeNode<T> * Delete_rec(TreeNode<T> * node, const T & aData);
+		void top_view_rec(TreeNode<T> * root_member, int index);
 		int Size_rec(TreeNode<T> * node);
 
 		void Preorder(TreeNode<T> *root_member);
@@ -378,4 +383,32 @@ void Tree<T>::printLevelOrder(TreeNode<T> * root_member)
 
 }
 
+//map<int, <T>> topView;
 
+template <typename T>
+void Tree<T>::top_view_rec(TreeNode<T> * root_member, int index){
+
+		if(root_member == nullptr)
+				return;
+
+		if (topView.find(index) == topView.end() )
+				topView[index] = root_member->GetData();
+
+		top_view_rec(root_member->GetLeft(), --index);
+		top_view_rec(root_member->GetRight(), ++index);
+}
+
+		template <typename T>
+void Tree<T>::top_view()
+{
+		int index=0;
+
+		top_view_rec(root, index);
+
+		for(auto i : topView)
+				//cout << i.first << " : " << i.second << " | ";
+				cout << i.second << " ";
+
+		cout << endl;
+
+}
